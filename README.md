@@ -9,34 +9,45 @@
 
 # Setup
 
-First make sure Docker Desktop is installed, you can download from the [official page](https://www.docker.com/products/docker-desktop/)
-
+First make sure Docker Desktop is installed, you can install Docker from [official website](https://www.docker.com/products/docker-desktop/)
 > Clone this repo
 
 ```
 git clone https://github.com/1HoWK/URL-Shortener.git
 ```
 
-Navigate to where you clone your project.
+> Navigate to the project directory 
 
-Make sure Docker Desktop is opened and proceed with the following commands.
+```
+cd URL-Shortener/
+```
 
-> Build and run with Compose
+Make sure Docker Desktop is opened before proceeds with the following commands.
+
+> Start Docker Compose
 
 ```
 docker compose up
 ```
 
-> Start Docker Service
+> Verify Docker containers are Running, it lists all running services defined in the docker-compose.yaml
 
 ```
-docker compose start
+docker compose ps
+```
+
+> Verify that the web app is running from the following endpoints
+
+```
+http://localhost:5173/ : frontend
+
+http://localhost:8000/shorten_url_records : backend
 ```
 
 > End Docker Service once you are done
 
 ```
-docker compose stop
+docker compose down
 ```
 
 
